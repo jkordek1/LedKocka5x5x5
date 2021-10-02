@@ -1,4 +1,4 @@
 # LedKocka5x5x5
 Kocka sastavljena od 125 svjetlećih dioda
 
-<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/YpSFf-s8Nvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+![LED_Cube_5x5x5](https://user-images.githubusercontent.com/5957510/135715022-b85a7095-d235-457f-b321-4fe90a2ca9e6.gif)
