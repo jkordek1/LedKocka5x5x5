@@ -1,3 +1,3 @@
 This directory contains Solidworks assembly and step models of PCBs
 
-![](Enclosure/Enclosure.jpeg)
+![](Images/PXL_20211001_124730153.jpg)
