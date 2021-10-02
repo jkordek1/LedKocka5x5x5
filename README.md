@@ -1,5 +1,5 @@
 # LedKocka5x5x5
-Kocka pogonjena ATmega16 mikroupravljačem i HC595 posmačnim registrima, sastavljena od 125 svjetlećih dioda.
+125 LED cube powered by ATmega16 microcontroller and HC595 shift registers
 
 Video of it in action: https://www.youtube.com/watch?v=YpSFf-s8Nvs
 
