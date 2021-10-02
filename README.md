@@ -1,5 +1,5 @@
 # LedKocka5x5x5
-Kocka sastavljena od 125 svjetlećih dioda
+Kocka pogonjena ATmega16 mikroupravljačem i HC595 posmačnim registrima, sastavljena od 125 svjetlećih dioda. .
 
 Full youtube video: https://www.youtube.com/watch?v=YpSFf-s8Nvs
 
