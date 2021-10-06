@@ -134,27 +134,18 @@
     <Compile Include="AVR lib\AVR_lib.h">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="vjezba415.c">
+    <None Include="v3.c">
       <SubType>compile</SubType>
     </None>
-    <None Include="vjezba416.c">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="vjezba417.c">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="vjezba413.c">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="vjezba414.c">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="vjezba411.c">
-      <SubType>compile</SubType>
-    </None>
-    <Compile Include="vjezba412.c">
+    <Compile Include="v4.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="v1.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="v2.c">
+      <SubType>compile</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AVR lib" />

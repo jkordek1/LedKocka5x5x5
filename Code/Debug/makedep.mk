@@ -4,5 +4,5 @@
 
 AVR lib\AVR_lib.c
 
-vjezba412.c
+v4.c
 

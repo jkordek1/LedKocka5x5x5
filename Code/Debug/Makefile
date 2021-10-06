@@ -39,7 +39,7 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../AVR\ lib/AVR_lib.c \
-../vjezba412.c
+../v4.c
 
 
 PREPROCESSING_SRCS += 
@@ -50,19 +50,19 @@ ASM_SRCS +=
 
 OBJS +=  \
 AVR\ lib/AVR_lib.o \
-vjezba412.o
+v4.o
 
 OBJS_AS_ARGS +=  \
 "AVR lib/AVR_lib.o" \
-vjezba412.o
+v4.o
 
 C_DEPS +=  \
 AVR\ lib/AVR_lib.d \
-vjezba412.d
+v4.d
 
 C_DEPS_AS_ARGS +=  \
 "AVR lib/AVR_lib.d" \
-vjezba412.d
+v4.d
 
 OUTPUT_FILE_PATH +=izlaz.elf
 
@@ -85,7 +85,7 @@ AVR\ lib/AVR_lib.o: ../AVR\ lib/AVR_lib.c
 	@echo Finished building: $<
 	
 
-./vjezba412.o: .././vjezba412.c
+./v4.o: .././v4.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega16" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

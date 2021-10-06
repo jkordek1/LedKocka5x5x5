@@ -16,6 +16,8 @@ uint8_t prazan_hod = 0;
 bool smjer = true;
 uint8_t MOD = 1;
 uint8_t MOD2BROJAC = 1;
+uint8_t cntr = 0;
+uint8_t var = 0;
 
 #define DATA PA1
 #define CLOCK PA3
@@ -107,6 +109,10 @@ int A3[5][5] = {
 	{0, 1, 1, 1, 0},
 	{0, 0, 0, 0, 0}
 };
+
+int M[125]= {0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1,
+	1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1,
+0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1};
 
 void all_off(){
 	for(int j = 0; j < 25; j++){
@@ -224,6 +230,16 @@ ISR(TIMER0_OVF_vect){ // prekidna rutina za timer0
 
 	if(trenutni_sloj == 6)	trenutni_sloj = 1;
 		}
+		else if (MOD == 3){
+				TCNT0 = 53;
+				prazan_hod++;
+				if(prazan_hod == 12){
+					var++;
+					if (var == 5) var = 0;
+					prazan_hod = 0;
+				}
+			
+		}
 	}
 	
 void inicijalizacija(){
@@ -294,6 +310,20 @@ ISR ( TIMER2_OVF_vect ) { // prekidna rutina za timer2
 				}
 		prazan_hod = 0;
 		}
+		
+	}
+	else if ( MOD == 3){
+			TCNT2 = 200; // po? etna vrijednost registra
+			sloj(cntr + 1);
+			for(int i = 0; i < 25; i++){
+				set_port(PORTA, DATA, M[i + 25 * cntr + var]);
+				TOGGLE_PORT(PORTA, CLOCK); //1
+				TOGGLE_PORT(PORTA, CLOCK); //0
+			}
+			TOGGLE_PORT(PORTA, LATCH); //1
+			TOGGLE_PORT(PORTA, LATCH); //0
+			cntr++;
+			if (cntr == 5) cntr = 0;
 		
 	}
 }
