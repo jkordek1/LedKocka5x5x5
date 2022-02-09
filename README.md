@@ -7,4 +7,4 @@ Video of it in action: https://www.youtube.com/watch?v=YpSFf-s8Nvs
 
 ![](Images/PXL_20211001_124730153.jpg)
 
-![](Enclosure/Enclosure.PNG)
+![](Enclosure/Enclosure.png)
