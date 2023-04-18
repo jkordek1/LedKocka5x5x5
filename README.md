@@ -20,3 +20,15 @@ Project BOM is not optimal. Due to electronic components shortage, "on-hand" ava
  <img width="500" src="https://raw.githubusercontent.com/jkordek1/LedKocka5x5x5/main/Enclosure/Enclosure.png">
  <img width="500" src="https://raw.githubusercontent.com/jkordek1/LedKocka5x5x5/main/Images/Kocka.PNG">
 </p>
+
+## Project folder structure
+    .
+    ├── ...
+    ├── Code                    # C code for microcontroller
+    ├── Enclosure               # 3D files and images of enclosure
+    ├── Images                  # Project images folder
+    ├── Output files            # Gerber files folder
+    ├── KiCad files             # Main folder
+    │   ├── LED_Cube_5X5X5      # First KiCAD project folder
+    │   └── LED_Cube_5X5X5_PCB2 # Second KiCAD project folder
+    └── ...
