@@ -134,12 +134,15 @@
     <Compile Include="AVR lib\AVR_lib.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="v5.c">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="v3.c">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="v4.c">
+    <None Include="v4.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
     <None Include="v1.c">
       <SubType>compile</SubType>
     </None>
